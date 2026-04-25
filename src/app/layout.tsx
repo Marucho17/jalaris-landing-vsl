@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Jalaris Aesthetic Point — El Método Jalaris",
   description:
     "Remodelación corporal sin cirugía. El Método Jalaris combina láser de precisión con aprobación FDA y evaluación médica personalizada para resultados reales.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
