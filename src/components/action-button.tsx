@@ -2,7 +2,7 @@
 
 import { trackCtaClick } from "@/lib/analytics";
 
-const WHATSAPP_NUMBER = "5493543609964";
+const WHATSAPP_NUMBER = "17542308777";
 const WHATSAPP_MESSAGE =
   "Hola! Vi tu negocio en Google y quiero más información";
 
