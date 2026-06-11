@@ -2,27 +2,11 @@
 
 import { trackCtaClick } from "@/lib/analytics";
 
-const BASE_URL =
-  "https://api.leadconnectorhq.com/widget/form/cJ2qSlQxGCYyufQuoa3u?notrack=true";
+const WHATSAPP_NUMBER = "5493543609964";
+const WHATSAPP_MESSAGE =
+  "Hola! Vi tu negocio en Google y quiero más información";
 
-const UTM_PARAMS = [
-  "fbclid",
-  "utm_source",
-  "utm_medium",
-  "utm_campaign",
-  "utm_content",
-  "utm_term",
-  "utm_id",
-];
-
-function getCtaUrl() {
-  if (typeof window === "undefined") return BASE_URL;
-  const params = new URLSearchParams(window.location.search);
-  const extra = UTM_PARAMS.filter((k) => params.has(k))
-    .map((k) => `${k}=${encodeURIComponent(params.get(k)!)}`)
-    .join("&");
-  return extra ? `${BASE_URL}&${extra}` : BASE_URL;
-}
+const CTA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export function ActionButton({
   text = "Quiero agendar mi sesión de diagnóstico",
@@ -35,7 +19,7 @@ export function ActionButton({
 }) {
   return (
     <a
-      href={getCtaUrl()}
+      href={CTA_URL}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackCtaClick(location)}
