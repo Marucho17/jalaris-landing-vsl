@@ -5,6 +5,7 @@ import { BeforeAfter } from "@/components/before-after";
 import { Founder } from "@/components/founder";
 import { TargetAudience } from "@/components/target-audience";
 import { FinalCta } from "@/components/final-cta";
+import { Financing } from "@/components/financing";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <BeforeAfter />
         <Founder />
         <TargetAudience />
+        <Financing />
         <FinalCta />
       </main>
       <Footer />
